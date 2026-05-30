@@ -69,3 +69,11 @@ Cuando una petición web interceptada por el API Gateway llega al controlador, e
                                  ├──► [ ClimaClient ] ─────► API de Condiciones Climáticas
                                  ├──► [ EvidenciaClient ] ─► Gestión de Archivos (AWS Beanstalk)
                                  └──► [ Notificacion ] ────► Servidor de Alertas (AWS Beanstalk)
+
+
+## 🛠️ Especificaciones de Interconexión y Resiliencia
+
+El microservicio centralizado opera bajo estrictas políticas de tolerancia a fallas y desacoplamiento de infraestructura:
+
+* **Consumos Declarativos:** Interconectado mediante interfaces `@FeignClient` limpias que apuntan a variables dinámicas mapeadas para entornos locales (`localhost`) y servidores de producción.
+* **Mecanismos de Resiliencia:** Cuenta con la propiedad `spring.cloud.openfeign.circuitbreaker.enabled=true` activa, inyectando disyuntores lógicos (Circuit Breakers) para evitar caídas en cadena si alguno de los extremos en AWS o Railway experimenta degradación de red o latencia.
