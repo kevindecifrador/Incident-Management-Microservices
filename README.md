@@ -77,3 +77,10 @@ El microservicio centralizado opera bajo estrictas políticas de tolerancia a fa
 
 * **Consumos Declarativos:** Interconectado mediante interfaces `@FeignClient` limpias que apuntan a variables dinámicas mapeadas para entornos locales (`localhost`) y servidores de producción.
 * **Mecanismos de Resiliencia:** Cuenta con la propiedad `spring.cloud.openfeign.circuitbreaker.enabled=true` activa, inyectando disyuntores lógicos (Circuit Breakers) para evitar caídas en cadena si alguno de los extremos en AWS o Railway experimenta degradación de red o latencia.
+
+## 💻 Sincronización Full-Stack (Capa Cliente)
+
+La interfaz de usuario del ecosistema municipal fue desarrollada como una Single Page Application (SPA) interactiva utilizando **React, Vite y JavaScript moderno (ES6+)**. 
+
+El control de código y mis contribuciones lógicas aplicadas sobre las vistas responsivas y el consumo de las APIs enrutadas por el Gateway pueden auditarse directamente en el repositorio principal del equipo encargado de la capa cliente:
+* **Módulo de Interfaz Web:** [Lizherk/AyuntamientoFront](https://github.com/Lizherk/AyuntamientoFront) (Contribuciones directas en diseño y consumo asíncrona de servicios distribuidos).
