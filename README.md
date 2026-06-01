@@ -25,27 +25,17 @@ Este repositorio aloja el **orquestador central** del sistema, migrado estratég
 
 El diseño de este microservicio sigue principios sólidos de arquitectura limpia y separación estricta de responsabilidades:
 
-src/main/java/edu/tecnm/
-
-├── client/        # Clientes OpenFeign (Auth, Clima, Evidencia, Notificación)
-
-├── config/        # Seguridad de Spring Security, Filtros JWT e Interceptores Feign
-
-├── controller/    # Endpoint REST expuesto para la gestión de incidencias
-
-├── dto/           # Data Transfer Objects y esquemas de respuesta desacoplados
-
-├── entity/        # Modelos de persistencia para la base de datos relacional
-
-├── exception/     # Manejo global y centralizado de excepciones (Handler)
-
-├── mapper/        # Interfaces MapStruct para transferencia eficiente entre capas
-
-├── orchestrator/  # Orquestador del flujo y lógica de negocio distribuida
-
-├── repository/    # Interfaces de persistencia (Spring Data JPA)
-
-└── util/          # Utilidades criptográficas y parsing de JWT tokens
+    src/main/java/edu/tecnm/
+    ├── client/        # Clientes OpenFeign (Auth, Clima, Evidencia, Notificación)
+    ├── config/        # Seguridad de Spring Security, Filtros JWT e Interceptores Feign
+    ├── controller/    # Endpoint REST expuesto para la gestión de incidencias
+    ├── dto/           # Data Transfer Objects y esquemas de respuesta desacoplados
+    ├── entity/        # Modelos de persistencia para la base de datos relacional
+    ├── exception/     # Manejo global y centralizado de excepciones (Handler)
+    ├── mapper/        # Interfaces MapStruct para transferencia eficiente entre capas
+    ├── orchestrator/  # Orquestador del flujo y lógica de negocio distribuida
+    ├── repository/    # Interfaces de persistencia (Spring Data JPA)
+    └── util/          # Utilidades criptográficas y parsing de JWT tokens
 
 ## 🏗️ Flujo de Arquitectura de Red y Descubrimiento
 
